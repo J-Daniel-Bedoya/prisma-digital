@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import Home from '../components/home/Home';
 import Registro from '../components/registro/Registro';
 
-function App() {
+const App = () => {
   
 
   return (
@@ -16,8 +17,8 @@ function App() {
           <Route element={}>
              
           </Route>           */}
-          <Route path='/' element={<Registro/>}/>
-          
+          <Route path='/home' element={<Home />}/>
+          <Route path='/' element={<Registro />}/>
 
                   
 

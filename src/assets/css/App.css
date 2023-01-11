@@ -1,4 +1,6 @@
-@import url('./styles/Registro.css');
+@import url('./styles/registro/Registro.css');
+@import url('./styles/home/Home.css');
+
 
 *{
   margin: 0;
