@@ -7,6 +7,7 @@ const home = () => {
     <div className='logo_backgrnd'>
         <img src={LogoPrisma} alt='Logo_Prisma' className="logo_prisma"/>
     </div>
+    <hr className='barra'></hr>
     <div className='info_backgrnd'>
         <div className='info_card'>
             <h1>Movimientos</h1>
