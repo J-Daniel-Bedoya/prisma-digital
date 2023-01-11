@@ -16,12 +16,12 @@ function App() {
           <Route element={}>
              
           </Route>           */}
-
+          <Route path='/' element={<Registro/>}/>
+          
 
                   
 
         </Routes>
-        <Registro/>
       </div>
     </HashRouter>
   )
