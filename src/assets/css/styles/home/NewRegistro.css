@@ -1,0 +1,17 @@
+.newRegistro {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #0e0e0e5f;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.newRegistro__container{
+  width: 23%;
+  height: 60%;
+  background-color: aliceblue;
+  border-radius: 3px;
+  padding: 1rem;
+}

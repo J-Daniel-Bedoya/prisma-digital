@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LogoPrisma from '../../assets/imgs/logo-prisma.png'
+import NewRegistro from './NewRegistro'
 
 const home = () => {
+
+    const [registroModal, setRegistroModal] = useState(false)
+
   return (
     <>  
     <div className='logo_backgrnd'>
@@ -57,10 +61,15 @@ const home = () => {
                 </div>
             </div>
             <div className='btns_home'>
-            <button className='btn_verMas'>Ver mas</button>
-            <button className='btn_registro_movimiento'>+</button>
+                <button className='btn_verMas'>Ver mas</button>
+                <button className='btn_registro_movimiento' onClick={() => setRegistroModal(!registroModal)}>+</button>
             </div>
         </div>
+        {
+            registroModal && (
+                <NewRegistro registroModal={registroModal} setRegistroModal={setRegistroModal}/>
+            )
+        }
     </div>
     </>
   )
