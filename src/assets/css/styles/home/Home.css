@@ -26,6 +26,7 @@
   background-color: whitesmoke;
   padding: 2rem;
   padding-left: 5rem;
+  overflow-y: auto;
 }
 .info_movimientos{
   background-color: #ffffff;
@@ -44,6 +45,7 @@
   gap: 2rem;
 }
 .btn_verMas{
+  cursor: pointer;
   margin-top: 1.5rem;
   width: 15rem;
   height: 2rem;
@@ -51,6 +53,7 @@
   background-color: rgb(204, 204, 204);
 }
 .btn_registro_movimiento{
+  cursor: pointer;
   width: 4rem;
   height: 4rem;
   border-radius: 50px;
