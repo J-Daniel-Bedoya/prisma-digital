@@ -2,13 +2,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { actionRegisterAsync } from "../../redux/actions/userActions";
+import LogoPrisma2 from '../../assets/imgs/logo-prisma.png'
 // import axios from "axios";
 
 
 const Register = () => {
 
   const dispatch = useDispatch();
-  // const apiTienda = "https://abarrotado-production.up.railway.app/api/v1/"
   const {
     register,
     handleSubmit,
@@ -35,8 +35,12 @@ const Register = () => {
 
   return (
     <div className="register">
-      <h1>Crear una nueva cuenta</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <div className='logo_backgrnd1'>
+        <img src={LogoPrisma2} alt='Logo_Prisma2' className="logo_prisma2"/>
+      </div>
+      <hr className="barra2"></hr>
+      <form onSubmit={handleSubmit(onSubmit)} className='register_container'>
+        <h1>Crear cuenta</h1>
         <div className="" controlId="formBasicEmail">
           <div label="Name" className="">
             <input
@@ -76,16 +80,17 @@ const Register = () => {
           <div label="Confirm Passwor" className="">
             <input
               type="password"
-              placeholder="repeatPassword"
+              placeholder="Repeat  Password"
               {...register("repeatPassword")}
             />
             {/* <div className="">
               {errors.repeatPassword?.message}
             </div> */}
           </div>
+          <p>Nota: contraseña minima 6 caracteres.</p>
         </div>
 
-        <button variant="warning" type="submit">
+        <button variant="warning" type="submit" className="register_input">
           Register
         </button>
       </form>

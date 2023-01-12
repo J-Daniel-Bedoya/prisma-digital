@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 // import { schemaLogin } from "../../services/data";
 import { actionLoginAsync, loginProviderAsync } from "../../redux/actions/userActions";
 import googleLogo from "../../assets/imgs/gogle_logo.png";
+import LogoPrisma1 from '../../assets/imgs/logo-prisma.png'
 
 const Login = () => {
   const dispatch=useDispatch()
@@ -25,11 +26,16 @@ const Login = () => {
 
   return (
     <div className="login">
+      <div className='logo_backgrnd1'>
+        <img src={LogoPrisma1} alt='Logo_Prisma1' className="logo_prisma1"/>
+      </div>
+      <hr className="barra1"></hr>
       <div className="login__container">
         <h1>Iniciar Sesión</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div label="Email address" className="mb-3">
-            <input
+          <div label="Email address" >
+            <p>User</p>
+            <input className="email_input"
               type="email"
               autoComplete="off"
               placeholder="name@example.com"
@@ -38,7 +44,8 @@ const Login = () => {
           </div>
           {/* <p>{errors.email?.message}</p> */}
           <div label="Password">
-            <input
+          <p>Password</p>
+            <input className="password_input"
               type="password"
               autoComplete="off"
               placeholder="Password"
@@ -47,10 +54,10 @@ const Login = () => {
           </div>
           {/* <p>{errors.password?.message}</p> */}
 
-          <button variant="warning" type="submit" className="">
-            Iniciar Sesión
+          <button variant="warning" type="submit" className="login_input">
+            login
           </button>
-          <img src={googleLogo} alt="Google" style={{width: 50, marginLeft: 30}} onClick={handleLoginGoogle} />
+          <img className="logo_login" src={googleLogo} alt="Google" style={{width: 50, marginLeft: 30}} onClick={handleLoginGoogle} />
           <i className="fa-solid fa-phone" onClick={handleLoginPhone}></i>
         </form>
         <Link to="/Register" className="rigistro__yes">¿Desea crear una cuenta?</Link>
