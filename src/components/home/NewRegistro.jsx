@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { 
   addDoc,
   collection, 
-  // getFirestore
 } from 'firebase/firestore';
 
 import { database } from '../../firebase/firebaseConfig';

@@ -51,8 +51,9 @@ const VerMovimiento = ({verMovimientoModal, setVerMovimientoModal, idRegistro}) 
   return (
     <div className='newRegistro'>
       <div className='newRegistro__container'>
-        <h4>Registro de Movimientos</h4>
+        <h3>Ver Movimientos</h3>
         <div >
+          <h4>{registro.fechaYHora?.stringValue}</h4>
           <div>
             <label htmlFor="description">Descripcion</label>
             <br />
