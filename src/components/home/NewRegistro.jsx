@@ -51,18 +51,18 @@ const NewRegistro = ({registroModal, setRegistroModal}) => {
       <div className='newRegistro__container'>
         <h4>Registro de Movimientos</h4>
         <form onSubmit={handleSubmit(submit)}>
-          <div>
+          <div className='info_description'>
             <label htmlFor="description">Descripcion</label>
             <br />
             <input type="text" name='description' {...register('descripcion')}/>
           </div>
-          <div>
+          <div className='movimiento_info'>
             <label htmlFor="type">Tipo de Movimiento</label>
             <br />
             <input type="radio" name='type' onClick={() => typeForm('ingreso')}/>Ingreso
             <input type="radio" name='type' onClick={() => typeForm('gasto')}/>Gasto
           </div>
-          <div>
+          <div className='valor_info'>
             <label htmlFor="valor">Valor</label>
             <br />
             <input type="number" name='valor' {...register('valor')}/>
