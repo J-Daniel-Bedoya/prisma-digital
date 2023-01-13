@@ -46,30 +46,34 @@ const NewRegistro = ({registroModal, setRegistroModal}) => {
 
   // console.log(type)
 
-  return (
+  return ( 
     <div className='newRegistro'>
       <div className='newRegistro__container'>
-        <h4>Registro de Movimientos</h4>
-        <form onSubmit={handleSubmit(submit)}>
+        <h3>Registro de Movimientos</h3>
+        <form onSubmit={handleSubmit(submit)} className='newRegistro__form'>
           <div className='info_description'>
             <label htmlFor="description">Descripcion</label>
             <br />
-            <input type="text" name='description' {...register('descripcion')}/>
+            <input type="text" id='description' {...register('descripcion')}/>
           </div>
           <div className='movimiento_info'>
             <label htmlFor="type">Tipo de Movimiento</label>
             <br />
-            <input type="radio" name='type' onClick={() => typeForm('ingreso')}/>Ingreso
-            <input type="radio" name='type' onClick={() => typeForm('gasto')}/>Gasto
+            <div>
+              <input type="radio" id='type' onClick={() => typeForm('ingreso')}/>Ingreso
+              <br />
+              <input type="radio" id='type' onClick={() => typeForm('gasto')}/>Gasto
+            </div>
           </div>
           <div className='valor_info'>
             <label htmlFor="valor">Valor</label>
             <br />
-            <input type="number" name='valor' {...register('valor')}/>
+            <input type="number" id='valor' {...register('valor')}/>
           </div>
-
-          <button type='submit'>Registrar</button>
-          <button onClick={() => setRegistroModal(!registroModal)}>Cancelar</button>
+          <div className='newRegistro__buttons'>
+            <button type='submit'>Registrar</button>
+            <button onClick={() => setRegistroModal(!registroModal)}>Cancelar</button>
+          </div>
         </form>
 
       </div>

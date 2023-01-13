@@ -49,63 +49,64 @@ const VerMovimiento = ({verMovimientoModal, setVerMovimientoModal, idRegistro}) 
   // console.log(registro)
 
   return (
-    <div className='newRegistro'>
-      <div className='newRegistro__container'>
+    <div className='VerMovimiento'>
+      <div className='VerMovimiento__container'>
         <h3>Ver Movimientos</h3>
-        <div >
-          <h4>{registro.fechaYHora?.stringValue}</h4>
-          <div>
+        <h4>{registro.fechaYHora?.stringValue}</h4>
+        <form className='VerMovimiento__form'>
+          <div className='info_description'>
             <label htmlFor="description">Descripcion</label>
             <br />
             <input type="text" name='description' value={registro.descripcion?.stringValue}/>
           </div>
-          <div>
+          <div className='movimiento_info'>
             <label htmlFor="type">Tipo de Movimiento</label>
             <br />
 
             {
               registro.tipo?.stringValue === 'ingreso' ? (
-                <>
+                <div>
                   <input 
                     type="radio" 
                     name='type' 
                     onClick={() => typeForm('ingreso')} 
                     defaultChecked
                     />Ingreso
-      
+                  <br />
                   <input 
                     type="radio" 
                     name='type' 
                     onClick={() => typeForm('gasto')} 
                     />Gasto
-                </>
+                </div>
               ) : (
-                <>
+                <div>
                   <input 
                     type="radio" 
                     name='type' 
                     onClick={() => typeForm('ingreso')} 
                     />Ingreso
-      
+                  <br />
                   <input 
                     type="radio" 
                     name='type' 
                     onClick={() => typeForm('gasto')} 
                     defaultChecked
                   />Gasto
-                </>
+                </div>
                 )
             }
           </div>
-          <div>
+          <div className='valor_info'>
             <label htmlFor="valor">Valor</label>
             <br />
             <input type="number" name='valor' value={registro.valor?.stringValue}/>
           </div>
-
-          <button type='submit' onClick={() => submit()}>Eliminar</button>
-          <button onClick={() => setVerMovimientoModal(!verMovimientoModal)}>Cancelar</button>
-        </div>
+          <div className='newRegistro__buttons'>
+            <button type='submit' onClick={() => submit()}>Eliminar</button>
+            <button onClick={() => setVerMovimientoModal(!verMovimientoModal)}>Cancelar</button>
+          </div>
+        </form>
 
       </div>
     </div>
