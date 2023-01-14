@@ -42,6 +42,7 @@ const home = () => {
         setIdRegistro(id)
         setVerMovimientoModal(!verMovimientoModal)
     }
+
   return (
     <>  
     <div className='logo_backgrnd'>

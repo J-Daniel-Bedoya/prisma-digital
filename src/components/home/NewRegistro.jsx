@@ -37,8 +37,6 @@ const NewRegistro = ({registroModal, setRegistroModal}) => {
     } catch (error) {
       throw error;
     }
-    reset(defaultValues)
-    setType(null)
     setRegistroModal(!registroModal);
   }
 
