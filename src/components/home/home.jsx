@@ -9,7 +9,7 @@ import {
   import { database } from '../../firebase/firebaseConfig';
 
 
-const home = () => {
+const Home = () => {
 
     const [registroModal, setRegistroModal] = useState(false);
     const [verMovimientoModal, setVerMovimientoModal] = useState(false);
@@ -85,4 +85,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
