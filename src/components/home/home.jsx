@@ -2,14 +2,9 @@ import React, { useEffect, useState } from 'react'
 import LogoPrisma from '../../assets/imgs/logo-prisma.png'
 import NewRegistro from './NewRegistro'
 import VerMovimiento from './VerMovimiento'
-import { 
-    getFirestore, 
+import {  
     collection,
-    getDoc, 
     getDocs, 
-    doc, 
-    deleteDoc, 
-    setDoc,
   } from 'firebase/firestore';
   import { database } from '../../firebase/firebaseConfig';
 

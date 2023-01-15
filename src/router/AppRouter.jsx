@@ -4,7 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom"
 import CodeVerificaction from "../components/login/CodeVerification";
 
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase/FirebaseConfig";
+import { auth } from "../firebase/firebaseConfig";
 
 
 // import Navigationbar from "./components/nav/Navigationbar";
